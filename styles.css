@@ -1,30 +1,42 @@
 /* RESET BÁSICO */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background: #f9f7f4;
 }
-
 /* CONTENIDO CENTRADO */
 main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0;
+}
+
+nav a.active {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
 }
 
 /* TÍTULOS */
 h1, h2, h3 {
     margin-top: 0;
+    font-family: var(--font-heading);
 }
 
 /* HEADER */
 header {
     background: white;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-container {
-    max-width: 1000px;
+    max-width: var(--max-width);
     margin: auto;
     padding: 15px;
 
@@ -33,11 +45,13 @@ header {
     align-items: center;
 }
 
-#hero {
+
+
+.hero {
+    position: relative;
     background-image: url("images/Tejado-inicio.avif");
     background-size: cover;
     background-position: center;
-
     height: 70vh;
 
     display: flex;
@@ -48,18 +62,23 @@ header {
     text-align: center;
 }
 
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 25px;
-    border-radius: 10px;
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
 }
 
-#hero h2 {
+.hero-content {
+    position: relative;
+}
+
+.hero h2 {
     font-size: 2.5em;
     margin: 0;
 }
 
-#hero p {
+.hero p {
     font-size: 1.2em;
 }
 
@@ -69,20 +88,34 @@ header {
 }
 
 /* MENÚ */
+
 nav a {
     margin-left: 15px;
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     font-weight: bold;
+    position: relative;
 }
 
-nav a:hover {
-    color: #777;
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
 /* SECCIONES */
 section {
-    margin-bottom: 60px;
+    padding: var(--space-lg) 0;
 }
 
 /* FOOTER */
@@ -101,7 +134,7 @@ footer {
 
 .logos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -111,5 +144,36 @@ footer {
     width: 100%;
     height: 80px;
     object-fit: contain;
+}
+
+:root {
+  /* Colores */
+  --color-primary: #2f5d50;
+  --color-secondary: #c2a878;
+  --color-bg: #ffffff;
+  --color-text: #222222;
+
+  /* Tipografía */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* Espaciado */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+
+  /* Layout */
+  --max-width: 1100px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
 }
 
