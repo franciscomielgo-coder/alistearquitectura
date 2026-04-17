@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach(link => {
         if (link.getAttribute("href") === currentPage) {
-            link.style.color = "#999";
+            link.style.color = "#999999";
         }
     });
 
