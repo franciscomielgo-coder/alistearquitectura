@@ -2,15 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Plataforma en Defensa de la Arquitectura Tradicional de Aliste</title>
+    <title>Inventario - Arquitectura Tradicional de Aliste</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
     <div class="header-container">
         <h1 class="logo">
-            <img src="images/Logo-300x300.avif" alt="Plataforma en Defensa de la Arquitectura Tradicional de Aliste">
+            <a href="index.html">
+                <span class="sr-only">Aliste Arquitectura</span>
+                <img src="images/Logo-300x300.avif" alt="Plataforma en Defensa de la Arquitectura Tradicional de Aliste">
+            </a>
         </h1>
 
         <nav>
@@ -28,15 +33,101 @@
 </header>
 
 <main>
-    <h2>Inventario</h2>
-    <p>Contenido en construcción</p>
+
+    <div class="container">
+
+        <h1>Inventario</h1>
+
+        <p>
+            El inventario de bienes etnológicos de Aliste es uno de los objetivos principales de la Plataforma.
+            Lo entendemos como herramienta básica y fundamental de protección y planificación del patrimonio.
+        </p>
+
+        <p>
+            El inventario se centra en los bienes de la llamada “arquitectura tradicional”, debiéndose registrar
+            las principales técnicas y conocimientos asociados a las construcciones.
+        </p>
+
+        <a href="#" class="button">Descargar informe final Aliste Oriental</a>
+
+        <!-- GRID DE INVENTARIO -->
+        <div class="inventario-grid">
+
+            <a href="alcanices.html" class="card">
+                <img src="images/Ayto-Alcanices.avif" alt="Alcañices">
+                <div class="card-title">Alcañices</div>
+            </a>
+
+            <a href="figueruela.html" class="card">
+                <img src="images/Ayto-Fonfria.avif" alt="Figueruela de Arriba">
+                <div class="card-title">Figueruela de Arriba</div>
+            </a>
+
+            <a href="villalcampo.html" class="card">
+                <img src="images/Ayto-Alcanices.avif" alt="Villalcampo">
+                <div class="card-title">Villalcampo</div>
+            </a>
+
+            <a href="vinas.html" class="card">
+                <img src="images/Ayto-Fonfria.avif" alt="Viñas de Aliste">
+                <div class="card-title">Viñas de Aliste</div>
+            </a>
+
+        </div>
+
+    </div>
+
 </main>
 
-<footer>
-    <p>© 2026 Aliste Arquitectura</p>
-    <p>Aviso legal | Política de privacidad</p>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo -->
+        <div class="footer-col">
+            <a href="index.html" class="footer-logo">
+                <img src="images/Logo-300x300.avif" alt="Aliste Arquitectura">
+            </a>
+        </div>
+
+        <!-- Columna 1 -->
+        <div class="footer-col">
+            <a href="index.html">Inicio</a>
+            <a href="participa.html">Participa</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+
+        <!-- Columna 2 -->
+        <div class="footer-col">
+            <a href="actividades.html">Actividades</a>
+            <a href="inventario.html">Inventario</a>
+            <a href="galeria.html">Galería</a>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="footer-col">
+            <a href="prensa.html">Prensa</a>
+            <a href="biblioteca.html">Biblioteca</a>
+            <a href="directorio.html">Directorio</a>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col footer-legal">
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de privacidad</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © Plataforma en Defensa de la Arquitectura Tradicional de Aliste.
+        Calle San Francisco, 30 - 49500 Alcañices
+    </div>
+
 </footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>
