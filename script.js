@@ -21,22 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
             nav.classList.toggle('active');
             toggle.classList.toggle('active');
             overlay.classList.toggle('active');
+
+            document.body.classList.toggle('menu-open');
         });
 
-        overlay.addEventListener('click', () => {
+        const closeMenu = () => {
             nav.classList.remove('active');
             toggle.classList.remove('active');
             overlay.classList.remove('active');
-        });
+            document.body.classList.remove('menu-open');
+        };
+
+        overlay.addEventListener('click', closeMenu);
 
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
-                overlay.classList.remove('active');
-
-                setTimeout(() => {
-                    nav.classList.remove('active');
-                    toggle.classList.remove('active');
-                }, 50);
+                setTimeout(closeMenu, 50);
             });
         });
     }
