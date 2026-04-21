@@ -105,8 +105,6 @@ nav a {
     font-weight: bold;
     position: relative;
     padding: 12px 0;
-    width: 100%;
-    text-align: center;
 }
 
 nav a::after {
@@ -681,7 +679,6 @@ nav a {
 
     transition: opacity 0.3s ease;
     z-index: 1000;
-    z-index: 999;
 }
 
 .menu-overlay.active {
