@@ -2,7 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Inventario - Arquitectura Tradicional de Aliste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Inventario | Arquitectura Tradicional de Aliste</title>
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
@@ -18,11 +21,17 @@
             </a>
         </h1>
 
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <nav>
             <a href="index.html">Inicio</a>
             <a href="participa.html">Participa</a>
             <a href="actividades.html">Actividades</a>
-            <a href="inventario.html">Inventario</a>
+            <a href="inventario.html" class="active">Inventario</a>
             <a href="galeria.html">Galería</a>
             <a href="prensa.html">Prensa</a>
             <a href="biblioteca.html">Biblioteca</a>
@@ -34,48 +43,112 @@
 
 <main>
 
-    <div class="container">
-
+    <!-- HERO MINI -->
+    <section class="hero-mini">
         <h1>Inventario</h1>
+    </section>
 
-        <p>
-            El inventario de bienes etnológicos de Aliste es uno de los objetivos principales de la Plataforma.
-            Lo entendemos como herramienta básica y fundamental de protección y planificación del patrimonio.
-        </p>
+    <!-- INTRO -->
+    <section class="contenido">
+        <div class="container">
 
-        <p>
-            El inventario se centra en los bienes de la llamada “arquitectura tradicional”, debiéndose registrar
-            las principales técnicas y conocimientos asociados a las construcciones.
-        </p>
+            <p>
+                El inventario de bienes etnológicos de Aliste es uno de los objetivos principales de la Plataforma. 
+                Lo entendemos como herramienta básica y fundamental de protección y planificación del patrimonio, 
+                y al calor de iniciativas desarrolladas en este sentido para otras provincias de la región.
+            </p>
 
-        <a href="#" class="button">Descargar informe final Aliste Oriental</a>
+            <p>
+                El inventario se centra en los bienes de la llamada "arquitectura tradicional", pero no solo, 
+                debiéndose registrar las principales técnicas y conocimientos inmateriales asociados.
+            </p>
 
-        <!-- GRID DE INVENTARIO -->
-        <div class="inventario-grid">
-
-            <a href="alcanices.html" class="card">
-                <img src="images/Ayto-Alcanices.avif" alt="Alcañices">
-                <div class="card-title">Alcañices</div>
-            </a>
-
-            <a href="figueruela.html" class="card">
-                <img src="images/Ayto-Fonfria.avif" alt="Figueruela de Arriba">
-                <div class="card-title">Figueruela de Arriba</div>
-            </a>
-
-            <a href="villalcampo.html" class="card">
-                <img src="images/Ayto-Alcanices.avif" alt="Villalcampo">
-                <div class="card-title">Villalcampo</div>
-            </a>
-
-            <a href="vinas.html" class="card">
-                <img src="images/Ayto-Fonfria.avif" alt="Viñas de Aliste">
-                <div class="card-title">Viñas de Aliste</div>
-            </a>
+            <a href="#" class="button">Descargar informe final Aliste Oriental</a>
 
         </div>
+    </section>
 
-    </div>
+    <!-- GRID INVENTARIO -->
+    <section class="inventario">
+        <div class="container">
+
+            <div class="inventario-grid">
+
+                <!-- ITEM -->
+                <a href="alcanices.html" class="card">
+                    <img src="images/inventario/alcanices.avif" alt="Alcañices">
+                    <span class="card-title">Alcañices</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/figueruela.avif" alt="Figueruela de Arriba">
+                    <span class="card-title">Figueruela de Arriba</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/fonfria.avif" alt="Fonfría">
+                    <span class="card-title">Fonfría</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/gallegos.avif" alt="Gallegos del Río">
+                    <span class="card-title">Gallegos del Río</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/mahide.avif" alt="Mahide">
+                    <span class="card-title">Mahide</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/rabano.avif" alt="Rábano de Aliste">
+                    <span class="card-title">Rábano de Aliste</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/riofrio.avif" alt="Riofrío de Aliste">
+                    <span class="card-title">Riofrío de Aliste</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/samir.avif" alt="Samir de los Caños">
+                    <span class="card-title">Samir de los Caños</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/san-vicente.avif" alt="San Vicente de la Cabeza">
+                    <span class="card-title">San Vicente de la Cabeza</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/san-vitero.avif" alt="San Vitero">
+                    <span class="card-title">San Vitero</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/trabazos.avif" alt="Trabazos">
+                    <span class="card-title">Trabazos</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/videmala.avif" alt="Videmala">
+                    <span class="card-title">Videmala</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/villalcampo.avif" alt="Villalcampo">
+                    <span class="card-title">Villalcampo</span>
+                </a>
+
+                <a href="#" class="card">
+                    <img src="images/inventario/vinas.avif" alt="Viñas de Aliste">
+                    <span class="card-title">Viñas de Aliste</span>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
@@ -83,49 +156,40 @@
 
     <div class="footer-container">
 
-        <!-- Logo -->
         <div class="footer-col">
             <a href="index.html" class="footer-logo">
                 <img src="images/Logo-300x300.avif" alt="Aliste Arquitectura">
             </a>
         </div>
 
-        <!-- Columna 1 -->
         <div class="footer-col">
             <a href="index.html">Inicio</a>
             <a href="participa.html">Participa</a>
             <a href="contacto.html">Contacto</a>
         </div>
 
-        <!-- Columna 2 -->
         <div class="footer-col">
             <a href="actividades.html">Actividades</a>
             <a href="inventario.html">Inventario</a>
             <a href="galeria.html">Galería</a>
         </div>
 
-        <!-- Columna 3 -->
         <div class="footer-col">
             <a href="prensa.html">Prensa</a>
             <a href="biblioteca.html">Biblioteca</a>
             <a href="directorio.html">Directorio</a>
         </div>
 
-        <!-- Legal -->
-        <div class="footer-col footer-legal">
-            <a href="#">Aviso legal</a>
-            <a href="#">Política de privacidad</a>
-        </div>
-
     </div>
 
     <div class="footer-bottom">
         © Plataforma en Defensa de la Arquitectura Tradicional de Aliste.
-        Calle San Francisco, 30 - 49500 Alcañices
+        Calle San Francisco, 30 – 49500 Alcañices
     </div>
 
 </footer>
 
+<div class="menu-overlay"></div>
 
 <script src="script.js"></script>
 
