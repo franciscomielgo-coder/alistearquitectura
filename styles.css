@@ -478,15 +478,13 @@ img {
 /* ocultamos menú por defecto */
 nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    height: -webkit-fill-available;
-    min-height: 100vh;
+    inset: 0; /* 👈 sustituye top/left/width/height */
 
     background: white;
     z-index: 1002;
+
+    display: flex;
+    flex-direction: column;
 
     transform: translateY(-100%);
     opacity: 0;
@@ -494,11 +492,19 @@ nav {
 
     pointer-events: none;
 
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
-    padding-top: 90px;
+    padding-top: 80px;
+    padding-bottom: 40px; /* 👈 CLAVE para no tapar con Safari */
 }
+
+nav::after {
+    content: "";
+    height: env(safe-area-inset-bottom);
+    display: block;
+}
+
 /* cuando está activo */
 nav.active {
     transform: translateY(0);
@@ -510,8 +516,8 @@ nav.active {
 nav a {
     display: block;
     width: 100%;
-    padding: 18px 20px;
-    font-size: 1.1rem;
+    padding: 16px 20px;
+    font-size: 1rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -697,5 +703,6 @@ nav a:active {
 
 body.menu-open {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
-
