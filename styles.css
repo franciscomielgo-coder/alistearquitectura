@@ -791,6 +791,7 @@ html {
     overflow: hidden;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .municipio-grid {
@@ -819,11 +820,17 @@ html {
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
+    position: relative;
+    z-index: 0;
 }
 
 /* zoom suave */
 .municipio-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
+}
+
+.municipio-item:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2));
 }
 
 .linea {
@@ -860,3 +867,10 @@ nav a.active {
     opacity: 1;
 }
 
+.municipio-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+    z-index: 1;
+}
